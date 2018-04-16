@@ -13,6 +13,8 @@
 
         <label for="title">Enter a title</label>
         <input type="text" th:field="*{title}">
+
+        <p th:if="${#fields.hasErrors('yearPub')}" th:errors="*{yearPub}"></p>
         <label for="yearPub">Enter a Year of Publication</label>
         <input type="text" th:field="*{yearPub}">
 

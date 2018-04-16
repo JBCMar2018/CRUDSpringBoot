@@ -1,5 +1,7 @@
 package me.afua.demospring.model;
 
+import org.hibernate.validator.constraints.Range;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,15 +15,14 @@ public class Book {
     private long id;
 
     @NotEmpty
-    @Size(max=2)
     private String title;
 
     private String author;
     private String available;
 
-//    @NotNull
-//    @Max(1500)
-//    @Min(3000)
+
+    @NotNull
+    @Range(min=1500,max=2089)
     private int yearPub;
     private String ISBN;
 
