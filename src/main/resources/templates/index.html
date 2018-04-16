@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>List Items</title>
+</head>
+<body>
+    <h1>This is a list of books</h1>
+    <a href="/add">Add a book</a>
+
+        <!--List the items in the book table. The individual item to iterate through is called eachBook, and the list of items is called books-->
+        <div th:each="eachBook:${bookList}">
+            <p th:text="${eachBook.title}"></p>
+        </div>
+
+</body>
+</html>
